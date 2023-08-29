@@ -1,0 +1,251 @@
+/* 중복 */
+.inner,
+.howToUse,
+.chargingMethod{
+	max-width: 1500px;
+	margin: 0 auto;	
+}
+.howToUse,
+.chargingMethod{
+	padding: 130px 0;
+}
+.chargingMethod .heading,
+.howToUse .heading{
+  text-align: center;
+}
+.howToUse ul.orderOfUse,
+.orderOfUse li{
+  display: flex;
+  justify-content: space-between;
+}
+.cmContentsWrap li .desc .moreViewBtn,
+.cmContentsWrap li .desc .moreViewBtn::before{
+  transition: .3s;
+}
+
+
+.main{}
+
+
+/***** 메인 헤드라인 시작 *****/
+section.headline{
+  height: 570px;
+  background: url(../../img/sub1/headlineBg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.headline::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.headline .inner{
+  height: 100%;
+  position: relative;
+}
+.headline .heading{
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  z-index: 1;
+}
+
+.headline .heading h2{}
+.headline .heading p{}
+.headline .heading p i{}
+/***** 메인 헤드라인 끝 *****/
+
+
+/***** 섹션1_전기차 충전 사용 시작 *****/
+.howToUse{}
+.howToUse .heading{
+  margin-bottom: 45px;
+}
+.howToUse .heading h2{}
+
+.howToUse ul.orderOfUse{
+  gap: 45px;
+}
+.orderOfUse li{
+  width: calc(100% / 3);
+  height: 500px;
+  padding: 2rem;
+  flex-direction: column;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  transform: translateY(var(--h3));
+  opacity: 0;
+  transition: ease-in-out .5s;
+}
+.orderOfUse li,
+.orderOfUse li:nth-child(2) .iconWrap,
+.orderOfUse li:nth-child(3) .iconWrap{
+  position: relative;
+}
+.orderOfUse li.animation{
+  opacity: 1;
+  transform: translateY(0);
+}
+.orderOfUse li:nth-child(1){}
+.orderOfUse li:nth-child(2),
+.orderOfUse li:nth-child(1):before{transition-delay: .3s;}
+.orderOfUse li:nth-child(3){transition-delay: .6s;}
+.orderOfUse li:nth-child(1):before,
+.orderOfUse li:nth-child(2):before{
+  content: '';
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  opacity: 0;
+  transition: 1s;
+}
+.orderOfUse li:nth-child(1):before{
+  background: url(../../img/sub1/howToUse1_car.svg) no-repeat;
+}
+.orderOfUse li.animation::before{
+  opacity: 1;
+  left: calc(100% - 100px - 5rem);
+}
+
+.orderOfUse li .textWrap{}
+.orderOfUse li .textWrap .num{
+  font-size: var(--h5);
+}
+.orderOfUse li .textWrap h3{
+  margin: 2rem 0 1rem;
+}
+.orderOfUse li .textWrap p{}
+
+.orderOfUse li .iconWrap{
+  width: 130px;
+  height: 130px;
+  margin: 0 0 0 auto;
+}
+.orderOfUse li:nth-child(2) .iconWrap::before,
+.orderOfUse li:nth-child(2) .iconWrap::after,
+.orderOfUse li:nth-child(3) .iconWrap::before{
+  content: '';
+  position: absolute;
+}
+.orderOfUse li:nth-child(2) .iconWrap::before{
+  width: 38px;
+  height: 47px;
+  background: url(../../img/sub1/howToUse2_touch.svg) no-repeat;
+  top: 60px;
+  left: 30px;
+  z-index: 1;
+  opacity: 0;
+  transition: 1s;
+}
+.orderOfUse li:nth-child(2) .iconWrap::after{
+  width: 22px;
+  height: 22.5px;
+  background: url(../../img/sub1/howToUse2_touchBox.svg) no-repeat;
+  top: 52px;
+  left: 78px;
+  opacity: 0;
+}
+.orderOfUse li:nth-child(3) .iconWrap::before{
+  width: 15px;
+  height: 29px;
+  background: url(../../img/sub1/howToUse3_charging.svg) no-repeat;
+  top: 27px;
+  left: 105px
+}
+.orderOfUse li:nth-child(2).animation .iconWrap::after{
+  opacity: 1;
+  transition-delay: 1.4s;
+}
+.orderOfUse li .iconWrap img{}
+
+/***** 섹션1_전기차 충전 사용 끝 *****/
+
+
+/***** 섹션2_전기차 충전 방식 시작 *****/
+.chargingMethod{}
+.chargingMethod .heading{
+  margin-bottom: 80px;
+}
+.chargingMethod .heading h2{}
+
+.cmContentsWrap,
+.cmContentsWrap li,
+.cmContentsWrap li .desc{
+  display: flex;
+}
+.cmContentsWrap,
+.cmContentsWrap li .desc{
+  flex-direction: column;
+}
+.cmContentsWrap{
+  gap: 130px;
+}
+.cmContentsWrap li{
+  height: 440px;
+  justify-content: space-between;
+  gap: 100px;
+  overflow: hidden;
+}
+.cmContentsWrap li:nth-child(even){
+  flex-direction: row-reverse;
+}
+.cmContentsWrap li .imgWrap{
+  width: calc(100% - 35%);
+}
+.cmContentsWrap li .imgWrap img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cmContentsWrap li .desc{
+  width: 35%;
+  height: 100%;
+  justify-content: center;
+  border-bottom: 1px solid var(--white);
+}
+.cmContentsWrap li .desc h3{}
+.cmContentsWrap li .desc p{
+  margin: 1.5rem 0 60px;
+}
+.cmContentsWrap li .desc .moreViewBtn{
+  width: 150px;
+  height: 50px;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.cmContentsWrap li .desc .moreViewBtn::before{
+  content: '';
+  width: 300%;
+  height: 110%;
+  position: absolute;
+  top: 50%;
+  right: 160%;
+  transform: skew(-45deg) translateY(-50%);
+  z-index: -1;
+  background-color: var(--white);
+}
+/***** 섹션2_전기차 충전 방식 끝 *****/
+
+
+/* 호버 스타일 */
+@media (hover:hover){
+  .cmContentsWrap li .desc .moreViewBtn:hover{
+    color: var(--bk);
+    font-weight: 700;
+  }
+  .cmContentsWrap li .desc .moreViewBtn:hover::before{
+    right: 0;
+  }
+}

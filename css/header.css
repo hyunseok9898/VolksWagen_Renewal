@@ -1,0 +1,219 @@
+/* reset 중복요소가 있으므로 합치면 좋겠음 */
+.vwHead{ /* 영문 서체 레귤러 쓸 때에는 이 클래스 추가 */
+  font-family: 'vw-head', 'Pretendard', sans-serif;
+  font-weight: 400;
+}
+.vwHeadBold{ /* 영문 서체 볼드 쓸 때에는 이 클래스 추가 */
+  font-family: 'vw-head', 'Pretendard', sans-serif;
+  font-weight: 800;
+}
+/* h5와 겹침 */
+.header .mainMenu{
+  font-size: var(--h5);
+  line-height: 160%; /* 28.8px */
+  letter-spacing: 0.18px;
+  font-weight: 800;
+}
+
+/* p와 겹침 */
+.header .subMenu li a{
+  font-family: 'vw-head-bold';
+  font-size: 1rem;
+  line-height: 185%; /* 29.6px */
+  letter-spacing: 0.24px;
+}
+/****************************************/
+
+
+*{
+  box-sizing: border-box;
+}
+body > .wrap{
+  position: relative;
+}
+
+/* 중복 */
+.header a{
+  display: block;
+}
+.header, 
+.header h1.logo a,
+.header .mainMenu, .header .subMenu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .mainMenu li a::before{
+  transition: .3s;
+}
+
+.header{
+  width: 100%;
+  height: 70px;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid var(--white);
+  z-index: 100;
+}
+
+/***** 로고 시작 *****/
+.header h1.logo{}
+.header h1.logo a{
+  width: 160px;
+  justify-content: center;
+  height: 70px;
+}
+.header h1.logo a img{
+  width: 100%;
+}
+/***** 로고 끝 *****/
+
+
+/***** 메뉴 시작 *****/
+.header nav,
+.header .mainMenu,
+.header .mainMenu > li{
+  height: 100%;
+}
+.header nav{
+  margin: 0 6.25rem 0 auto;
+}
+.header .mainMenu{
+  text-align: center;
+  gap: 1rem;
+}
+.header .mainMenu.visible::before{
+  bottom: -40px;
+}
+
+.header .mainMenu > li{
+  position: relative;
+}
+.header .mainMenu > li > a{
+  height: inherit;
+  padding: 1.31rem 0.63rem 1rem;
+  position: relative;
+}
+.header .mainMenu > li > a::before,
+.header .subMenu li a::before{
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: var(--white);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 서브메뉴 시작 */
+.header .subMenu{
+  display: none;
+  width: max-content;
+  height: 40px;
+  justify-content: center;
+  gap: 0.5rem;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+}
+.header .subMenu.visible{
+  display: flex;
+}
+.header li:nth-child(4) .subMenu.visible{
+  display: flex;
+  right: 0;
+  transform: translateX(8.6rem);
+}
+.header li:nth-child(5) .subMenu.visible{
+  display: flex;
+  right: 0;
+  transform: translateX(0);
+}
+
+.header .subMenu li{
+  height: 100%;
+}
+.header .subMenu li a{
+  height: 100%;
+  padding: 0.3rem 0.63rem 0;
+  position: relative;
+  font-family: 'VW Head', 'Pretendard', sans-serif;
+}
+/* 서브메뉴 끝 */
+/***** 메뉴 끝 *****/
+
+
+/***** 햄버거 버튼 시작 *****/
+.trigger{
+  width: 2.25rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+.trigger span{
+  width: 100%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white);
+}
+.trigger span:nth-child(1){top: 0;}
+.trigger span:nth-child(2){top: 50%; transform: translate(-50%, -50%);}
+.trigger span:nth-child(3){bottom: 0;}
+/***** 햄버거 버튼 끝 *****/
+
+.headerBg{
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+.headerBg.sub{
+  height: calc(70px + 40px);
+  border-bottom: 1px solid var(--white);
+}
+
+/* 호버 스타일 */
+@media (hover:hover){
+  .header .mainMenu li a:hover::before{
+    width: calc(100% - 1.25rem);
+  }
+}
+
+
+/***** 반응형 *****/
+@media (max-width: 1420px) {
+  .header .mainMenu{
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .header{
+    padding: 0 var(--h5);
+    height: 60px;
+  }
+  .header h1.logo a{
+    width: fit-content;
+  }
+
+  /***** 햄버거 버튼 시작 *****/
+  .trigger{
+    width: 1.25rem;
+    height: var(--h5);
+  }
+  /***** 햄버거 버튼 끝 *****/
+
+  .headerBg{
+    height: 60px;
+  }
+}
