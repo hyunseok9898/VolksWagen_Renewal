@@ -30,7 +30,7 @@
   line-height: 155%; /* 37.2px */
   letter-spacing: 0.072px;
   font-family: 'vw-head', 'Pretendard', sans-serif;
-  color: #4C4C4C;
+  color: rgba(255, 255, 255, 0.6);
   text-align: center;
   position: relative;
   cursor: pointer;
@@ -226,7 +226,7 @@
   z-index: -1;
   background-color: white;
   display: block;
-  width: 321%;
+  width: 330%;
   height: 1100%;
   transform: rotate(315deg);
   transition: 0.5s;
@@ -263,8 +263,8 @@
     left: 50%;
     transform: translateX(-50%);
   }
-
 }
+
 @media (max-width: 768px) {
   /* 추가 */
   .model{
@@ -288,7 +288,7 @@
     margin-bottom: 20vh;
   }
   .model .bgSwiper{
-    height: 56%;
+    height: 63%;
     top: 0;
   }
   .model_inner .titleSwiper{padding: 1rem 0;}
@@ -296,6 +296,7 @@
     font-size: var(--h5);
     line-height: 163%; /* 26.08px */
     letter-spacing: 0.24px;
+    white-space: nowrap;
   }
 
   .model_inner .titleSwiper .swiper-wrapper .swiper-slide-active::before, 
@@ -446,17 +447,17 @@
   }
   .model .more_btn:hover span::before{    left: -122%;}
   .model .more_btn.click::before{left: -122%;}
-  /* .model .more_btn:hover::before{ left: -400%;} */
   .model .more_btn.click span a .model_btn_arrow{
     background-image: url(../img/model/rightarrowBlack.png);
   }
-  /* .model .more_btn:hover span a .model_btn_arrow{
-    background-image: url(../img/model/rightarrowWhite.png);
-  } */
   .model .more_btn.click span a{color: black;}
-  /* .model .more_btn:hover span a{color: white;} */
 }
-
+@media (max-width: 590px) {
+  .model .bgSwiper{
+    height: 60%;
+    top: 0;
+  }
+}
 @media (max-width: 520px) {
   .model .bgSwiper{
     height: 57%;
@@ -492,7 +493,7 @@
     right: -24.5%;
   }
   .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle > img{
-    width: 6.3vw;
+    width: 6.2vw;
   }
   .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle{
     bottom: -11%;

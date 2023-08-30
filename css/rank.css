@@ -83,7 +83,6 @@
 }
 /* 추가 */
 
-
 .rank_tab{
 	position: relative;
 	height: 440px;
@@ -206,7 +205,10 @@
 		text-align: center;
 		padding: 0;
 	}
-	.rank_inner .rank_text .rank_textDown button{text-align: right;}
+	.rank_inner .rank_text .rank_textDown button{
+		text-align: right;
+		margin-top: 1rem;
+	}
 	.rank_inner .rank_wrap{
 		display: flex;
 		flex-direction: column;

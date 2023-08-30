@@ -3,7 +3,7 @@ var mapContainer = document.getElementById("map"), //지도 표시할 div
       center: new kakao.maps.LatLng(37.566826, 126.9786567), //지도 중심좌표
       level: 1, //지도의 확대 레벨
     };
-var imageSrc = "../img/sub2/marker.svg", //마커 이미지 주소
+var imageSrc = "img/sub2/marker.svg", //마커 이미지 주소
     imageSize = new kakao.maps.Size(36, 40), //마커 이미지 크기
     imageOption = { offset: new kakao.maps.Point(18, 40) }; //마커 좌표와 일치시킬 이미지 좌표를 설정
 var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption); //마커의 이미지 정보를 가진 마커이미지 생성
@@ -102,7 +102,7 @@ function placesSearchCB(data, status, pagination){
       var li = document.createElement("li"),
           para = document.createElement("p"),
           liCount = document.querySelectorAll("#placesList li").length; //6) 장소 검색 결과 개수
-      para.textContent = place.place_name; //7) li 요소의 택스트 내용을 장소 명으로 채우기
+      para.textContent = place.place_name; //7) li 요소의 텍스트 내용을 장소 명으로 채우기
       li.placeData = place; //8) 사용자 지정 속성(placeData)을 추가 + place 객체를 할당(place 정보 저장)
       placesList.appendChild(li);
       li.appendChild(para);
