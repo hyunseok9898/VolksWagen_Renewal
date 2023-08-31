@@ -578,6 +578,7 @@
   .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_end{
     right: -23.5%;
   }
+
   .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle > img{
     width: 5.3vw;
   }
@@ -697,5 +698,44 @@
   }
   .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_end{
     right: -26%;
+  }
+}
+
+@media (max-width: 390px) {
+  .model .bgSwiper{
+    max-height: 450px;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle > img{
+    width: 4.2vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_front{
+    left: -26%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_end{
+    right: -23.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle > img{
+    width: 5.3vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle > img{
+    width: 4.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_front{
+    left: -33%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_end{
+    right: -21%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle > img{
+    width: 4.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle > img{
+    width: 5.1vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_front{
+    left: -31%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle > img{
+    width: 4.2vw;
   }
 }
