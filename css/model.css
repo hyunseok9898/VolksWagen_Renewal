@@ -565,3 +565,102 @@
     right: -26%;
   }
 }
+@media (max-width: 420px) {
+  .model .bgSwiper{max-height: 470px;}
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_circle{
+    bottom: -18%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_circle > img{
+    width: 5.2vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_front{
+    left: -32.7%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_end{
+    right: -30.7%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle > img{
+    width: 4.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle{
+    bottom: -9%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_front{
+    left: -27%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_end{
+    right: -22.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle > img{
+    width: 5.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle{
+    bottom: -10.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_front{
+    left: -34.4%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_end{
+    right: -28%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle > img{
+    width: 4.7vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle{
+    bottom: -6%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_front{
+    left: -32%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_end{
+    right: -20.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_circle > img{
+    width: 5.1vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_circle{
+    bottom: -6%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_front{
+    left: -33.9%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_end{
+    right: -26.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle > img{
+    width: 4.8vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle{
+    bottom: -9%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_front{
+    left: -37%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_end{
+    right: -28%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle > img{
+    width: 5.2vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle{
+    bottom: -11%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_front{
+    left: -29%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_end{
+    right: -31.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle > img{
+    width: 4.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle{
+    bottom: -12%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_front{
+    left: -26%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_end{
+    right: -26%;
+  }
+}
