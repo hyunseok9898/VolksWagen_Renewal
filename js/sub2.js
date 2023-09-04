@@ -26,29 +26,19 @@ function openmodal(place){
   var modalContentElement = document.getElementById("modal_content");
   modalContentElement.innerHTML = modalContent; //2) 모달 창 내부에 내용 채우기
   modal.style.display = "block"; //1)모달 창 열기
-  // placesListLi.forEach(function (li){
-  //   li.removeEventListener("mouseover", handleMouseOver); //3)
-  //   li.removeEventListener("mouseout", handleMouseOut); //3)
-  // 3) li의 mouseover, mouseout 이벤트 제거
-  //    제거하는 이유: 모달 창이 열린 상태에서 커스텀 오버레이가 표시되는 것 방지
-  // });
 }
 
 /********** 모달 창 닫기 **********/
 function hideModal(){
   modal.style.display = "none"; //1) 모달 창 닫기
-  // placesListLi.forEach(function (li){
-  //   li.addEventListener("mouseover", handleMouseOver); //2) li의 mouseover, mouseout 이벤트 추가
-  //   li.addEventListener("mouseout", handleMouseOut); //2)
-  // });
 }
 
 /********** 모달 창 닫기 버튼 클릭 시, 모달 창 닫힘 **********/
-function colseModalBtn(){
+function closeModalBtn(){
   var closeBtn = document.getElementsByClassName("modalCloseBtn")[0];
   closeBtn.onclick = function (){
     hideModal();
-  };
+  }; 
 }
 
 /********** 표시되어 있던 커스텀 오버레이 미표시 **********/
@@ -85,7 +75,7 @@ ps.keywordSearch("서울특별시 폭스바겐 서비스 센터", placesSearchCB
 
 
 /********** 장소 검색하기 **********/
-function placesSearchCB(data, status, pagination){
+function placesSearchCB(data, status){
   if(status === kakao.maps.services.Status.OK){ //1) 장소 검색 결과가 성공적으로 반환되었을 때
     var bounds = new kakao.maps.LatLngBounds(); //2) 'LatLngBounds' 객체 생성. 
         //2-1) 지도 화면에 표시하려는 영역을 의미
@@ -117,7 +107,7 @@ function placesSearchCB(data, status, pagination){
       li.addEventListener("click", (function (place){
         return function (){
           openmodal(place); //모달 창 열기
-          colseModalBtn(); //모달 창 닫기 버튼 클릭 시, 모달 창 닫힘
+          closeModalBtn(); //모달 창 닫기 버튼 클릭 시, 모달 창 닫힘
         };
       })(place));
     }
@@ -162,7 +152,7 @@ function createMarker(place){
   kakao.maps.event.addListener(marker, "click", function (){    
     customOverlay.setMap(null);
     openmodal(place); //모달 창 열기
-    colseModalBtn(); //모달 창 닫기 버튼 클릭 시, 모달 창 닫힘
+    closeModalBtn(); //모달 창 닫기 버튼 클릭 시, 모달 창 닫힘
   });
 }
 
@@ -185,16 +175,10 @@ function addDetailDivOnSmallScreen(place) {
 
     if (window.innerWidth < 768) {
       if (!existingDetailDiv) { //모바일 화면에서 detail이 없을 때
-        var detailDiv = document.createElement("div"), //1) 새로운 div.detail 생성
+        var detailDiv = document.createElement("div"); //1) 새로운 div.detail 생성
             mapContainer = document.createElement("div"); //3) 맵을 표시할 공간 생성
         detailDiv.className = "detail"; //1-1) detailDiv의 클래스 설정
         mapContainer.id = "map_container"; //3-1) mapContainer의 id 설정
-        var mapOption = {
-          center: new kakao.maps.LatLng(placeData.y, placeData.x), //3-2) 지도의 중심 좌표 설정
-          level: 3,
-          mapTypeId: kakao.maps.MapTypeId.ROADMAP, //3-3) 지도 종류 설정
-        };
-        var map = new kakao.maps.Map(mapContainer, mapOption);
 
         item.appendChild(detailDiv); //4) li에 detailDiv 추가
         detailDiv.appendChild(mapContainer); //5) detailDiv에 mapContainer 추가
