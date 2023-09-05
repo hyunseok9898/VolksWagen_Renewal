@@ -21,13 +21,13 @@ const elements = {
 function updateAnimations(scrollY, isMobile) {
   console.log(window.scrollY);
   const animations = [
-    { target: elements.orderOfUseLi[0], threshold: isMobile ? 0 : 0 }, // isMobile일 때 20, 그 외에는 20
-    { target: elements.orderOfUseLi[1], threshold: isMobile ? 220 : 10 }, // isMobile일 때 20, 그 외에는 20
-    { target: elements.orderOfUseLi[2], threshold: isMobile ? 480 : 20 }, // isMobile일 때 20, 그 외에는 20
-    { target: elements.chargingMethodHeading, threshold: isMobile ? 1000 : 520 }, // isMobile일 때 500, 그 외에는 500
-    { target: elements.cmContentsImg[0], threshold: isMobile ? 1150 : 550 }, // isMobile일 때 550, 그 외에는 550
-    { target: elements.cmContentsImg[1], threshold: isMobile ? 1900 : 1000 }, // isMobile일 때 1000, 그 외에는 1000
-    { target: elements.cmContentsImg[2], threshold: isMobile ? 2500 : 1400 }, // isMobile일 때 1500, 그 외에는 1500
+    { target: elements.orderOfUseLi[0], threshold: isMobile ? 0 : 0 }, // isMobile일 때 0, 그 외에는 0
+    { target: elements.orderOfUseLi[1], threshold: isMobile ? 220 : 10 }, // isMobile일 때 220, 그 외에는 10
+    { target: elements.orderOfUseLi[2], threshold: isMobile ? 480 : 20 }, // isMobile일 때 480, 그 외에는 20
+    { target: elements.chargingMethodHeading, threshold: isMobile ? 1000 : 520 }, // isMobile일 때 1000, 그 외에는 520
+    { target: elements.cmContentsImg[0], threshold: isMobile ? 1150 : 550 }, // isMobile일 때 1150, 그 외에는 550
+    { target: elements.cmContentsImg[1], threshold: isMobile ? 1900 : 1000 }, // isMobile일 때 1900, 그 외에는 1000
+    { target: elements.cmContentsImg[2], threshold: isMobile ? 2500 : 1400 }, // isMobile일 때 2500, 그 외에는 1400
   ];
 
   animations.forEach(({ target, threshold }, index) => { //1)
