@@ -44,7 +44,7 @@
 <br>
 
 ## 개발 기간
-2023-08-01 ~ 2023-08-15
+2023-08-01 ~ 2023-08-31
 
 <br>
 
@@ -119,12 +119,12 @@
 <br>
 
 ## 호스팅 사이트
-  - ### [메인페이지](https://hyunseok9898.github.io/VolksWagen_Renewal/)
+  - ### [메인페이지](https://drive.google.com/file/d/19Xs5TVDgnpIljTD__CsQdLBr3ILDYnBs/view?usp=sharing)
   - ### [서브페이지1 전기차 충전](https://hyunseok9898.github.io/VolksWagen_Renewal/)
   - ### [서브페이지2 서비스센터 찾기](https://hyunseok9898.github.io/VolksWagen_Renewal/sub2.html)
 <br>
 
 ## 산출물
-  - [프레젠테이션](https://docs.google.com/presentation/d/1A2UQdl01bdENRuTawteHNlcBqzPovYjvjcIu0ruZ3n4/edit?usp=sharing) 
+  - [프레젠테이션](https://github.com/hyunseok9898/VolksWagen_Renewal/files/12543522/_.-.-.pdf) 
   - [기획 - 브레인스토밍](https://www.figma.com/file/HDqJF9avXx68oub7UMVTXl/%ED%98%84%EC%A7%80%EC%98%88-%ED%8C%80%ED%94%8C-%ED%94%BC%EA%B7%B8%EC%9E%BC?type=whiteboard&node-id=0%3A1&t=zai64WWkzv1o3Arc-1) 
   - [와이어프레임 및 디자인 시안, 스타일 가이드](https://www.figma.com/file/0UdjtJ6ZKe9AiyBdA9k84T/%ED%98%84%EC%A7%80%EC%98%88-%ED%8C%80%ED%94%8C-%ED%94%BC%EA%B7%B8%EB%A7%88?type=design&node-id=0%3A1&mode=design&t=ycdW7EhUHFPQ2mb1-1)
