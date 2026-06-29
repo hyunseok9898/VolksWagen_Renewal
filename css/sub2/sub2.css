@@ -1,4 +1,4 @@
-/* 중복 */
+﻿/* 중복 */
 .inner{
 	max-width: 1500px;
 	margin: 0 auto;	
@@ -49,7 +49,6 @@ section.headline{}
   height: 100%;
 }
 
-<<<<<<< HEAD
 /* 커스텀 오버레이 (Leaflet 툴팁) */
 .customWrap{
   background: transparent;
@@ -67,35 +66,6 @@ section.headline{}
   color: var(--bk);
   box-shadow: 0px 1px 2px #888;
   white-space: nowrap;
-=======
-/* 커스텀 오버레이 */
-.customWrap{
-  width: 36px;
-  height: 40px;
-  position: relative;
-  transform: translateY(-20px);
-}
-.customOverlay{
-  padding: 0.63rem 1rem;
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 0.8rem);
-  transform: translateX(-50%);
-  border-radius: 5px;
-  background-color: #fff;
-  color: var(--bk);
-  box-shadow:0px 1px 2px #888;
-}
-.customOverlay:after{
-  content: '';
-  position: absolute;
-  margin-left: -12px;
-  left: 50%;
-  bottom: -12px;
-  width: 22px;
-  height: 12px;
-  background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png');
->>>>>>> d17231d733034b31237b535edf960ce753df812b
 }
 .customOverlay p{}
 
@@ -103,11 +73,7 @@ section.headline{}
 .modal,
 .modal_container{
   position: absolute;
-<<<<<<< HEAD
   z-index: 9999;
-=======
-  z-index: 10;
->>>>>>> d17231d733034b31237b535edf960ce753df812b
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
