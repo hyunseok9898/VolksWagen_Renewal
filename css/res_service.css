@@ -1,0 +1,94 @@
+@media (max-width: 768px) {
+  .service {
+    margin-bottom: 100px;
+  }
+  .service_title {
+    padding: 100px 0 45px;
+    text-align: center;
+  }
+  .service_title p {
+  }
+  .service_title p br {
+    display: block;
+  }
+  .service_container ul li a {}
+  .service_text_area {
+    display: none;
+  }
+  .service_text_area .iconWrap{
+    display: none;
+  }
+  .service_img_area {
+    width: 100%;
+    order: 1;
+  }
+  .service_btn_area {
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+  .service_arrow {
+    position: absolute;
+    width: 20px;
+    height: 14px;
+    background: url(../img/service/rightarrowWhite.png) center center;
+    background-size: cover;
+    right: 5%;
+    top: 40%;
+  }
+  .service_btn_area p {
+    height: 70px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: var(--h5);
+  }
+  .service_btn_area p::before {
+    content: "";
+    width: 300%;
+    height: 110%;
+    position: absolute;
+    top: 50%;
+    right: 160%; /* 호버 하기 전, 사각형 배경의 위치값. 작업자가 알아서 요소에 맞게 조정하기 */
+    transform: skew(-45deg) translateY(-50%);
+    transition: 0.5s;
+    z-index: -1;
+    background-color: rgb(255, 255, 255, 0.6);
+  }
+  .service_btn_area p:hover::before {
+    /*right: 0; */
+  }
+  .service_container ul li:last-child {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+  }
+  .service_container
+  ul
+  > li:nth-child(1)
+  > a:hover
+  .service_img_area
+  .service_img01 {
+  transform: scale(1);
+  transition: 0.4s;
+}
+.service_container
+  ul
+  > li:nth-child(2)
+  > a:hover
+  .service_img_area
+  .service_img02 {
+  transform: scale(1);
+  transition: 0.4s;
+}
+.service_container
+  ul
+  > li:nth-child(3)
+  > a:hover
+  .service_img_area
+  .service_img03 {
+  transform: scale(1);
+  transition: 0.4s;
+}
+}

@@ -1,0 +1,741 @@
+.model{
+  position: relative;
+}
+.model .model_wrap{
+  overflow: hidden;
+  padding: 190px 0;
+}
+.model_inner{
+  width: 1500px;
+  margin: auto;
+}
+.model_inner h2{
+  padding: 0 1rem;
+}
+.model .bgSwiper{
+  position: absolute;
+  height: 60%;
+  width: 100%;
+  z-index: -1;
+}
+.model .bgSwiper .swiper-wrapper .swiper-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.model_inner .titleSwiper{padding: 3rem 0;}
+.model_inner .titleSwiper .swiper-wrapper .swiper-slide{
+  font-size: var(--h4);
+  font-weight: 800;
+  line-height: 155%; /* 37.2px */
+  letter-spacing: 0.072px;
+  font-family: 'vw-head', 'Pretendard', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+.model_inner .titleSwiper .swiper-wrapper .swiper-slide::before{
+  content: '';
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: white;
+}
+.model_inner .titleSwiper .swiper-wrapper .swiper-slide::after{
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: white;
+}
+.model_inner .titleSwiper .swiper-wrapper .swiper-slide-active{
+  color: var(--white);
+}
+.model_inner .titleSwiper .swiper-wrapper .swiper-slide-active::before,
+.model_inner .titleSwiper .swiper-wrapper .swiper-slide-active::after{
+  width: 100%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper{
+  margin: 32px auto;
+}
+.model .car_swiper .swiper-container .swiper-wrapper .swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.3;
+  filter: blur(2.5px);
+}
+.model .car_swiper .swiper-container .swiper-wrapper .swiper-slide-active{
+  opacity: 1;
+  filter: none;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > img{
+  position: relative;
+  width: 85%;
+  z-index: 10;
+}
+/* 바퀴 */
+@keyframes rota{ 
+  0%{transform: rotate(0);}
+  100%{transform: rotate(-360deg);}
+} 
+@keyframes rota-back{ 
+  0%{transform: rotate(0);}
+  100%{transform: rotate(360deg);}
+} 
+
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .circle{
+  position: absolute;
+  z-index: 10;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .circle.rota{
+  animation: rota 870ms linear;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .circle.rota_back{
+  animation: rota-back 870ms linear;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .circle.stop{
+  animation: none;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_circle{
+  bottom: 5.5%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_circle > img{
+  width: 5.8vw;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_front{
+  left: 19.3%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_end{
+  right: 20.3%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle > img{
+  width: 5.2vw;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle{
+  bottom: 9%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_front{
+  left: 21.5%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_end{
+  right: 22.5%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle > img{
+  width: 6.1vw;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle{
+  bottom: 7%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_front{
+  left: 18.6%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_end{
+  right: 21%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle > img{
+  width: 5.3vw;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle{
+  bottom: 12%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_front{
+  left: 19.6%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_end{
+  right: 23.8%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_circle > img{
+  width: 5.9vw;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_circle{
+  bottom: 11%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_front{
+  left: 19.1%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_end{
+  right: 21.5%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle > img{
+  width: 5.5vw;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle{
+  bottom: 9%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_front{
+  left: 18%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_end{
+  right: 21%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle > img{
+  width: 6vw;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle{
+  bottom: 8%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_front{
+  left: 20%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_end{
+  right: 19.8%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle > img{
+  width: 5.4vw;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle{
+  bottom: 8%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_front{
+  left: 21.5%;
+}
+.model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_end{
+  right: 21.8%;
+}
+
+.model .more_btn{
+  background-color: transparent;
+  padding: 18px 24px;
+  margin: 48px auto auto;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: 0.7s;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+}
+.model .more_btn span{
+  color: #FFF;
+  text-align: center;
+  font-size: 1.13rem;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+}
+.model .more_btn span::before{
+  content: '';
+  position: absolute;
+  left: -600%;
+  top: -100%;
+  z-index: -1;
+  background-color: white;
+  display: block;
+  width: 330%;
+  height: 1100%;
+  transform: rotate(315deg);
+  transition: 0.5s;
+}
+.model .more_btn span a{
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.model .more_btn span a .model_btn_arrow{
+  width: 24px;
+  height: 17px;
+  display: inline-block;
+  background-image: url(../img/model/rightarrowWhite.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@media (hover:hover){
+  .model .more_btn:hover span a{color: black;}
+  .model .more_btn:hover span a .model_btn_arrow{background-image: url(../img/model/rightarrowBlack.png);}
+  .model .more_btn:hover span::before{    left: -152%;}
+}
+
+/***** 반응형 *****/
+@media (max-width: 1500px) {
+  .model_inner{width: 100%;}
+}
+@media (max-width: 1100px) {
+  .model_inner .titleSwiper .swiper-wrapper .swiper-slide-active::before, 
+  .model_inner .titleSwiper .swiper-wrapper .swiper-slide-active::after {
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  /* 추가 */
+  .model{
+    height: 100vh;
+    min-height: 750px;
+    margin: auto;
+  }
+  .model .model_wrap{
+    overflow: hidden;
+    height: inherit;
+    min-height: 750px;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .model_inner{width: 90%;}
+  .model_inner h2{
+    text-align: center;
+    margin-bottom: 20vh;
+  }
+  .model .bgSwiper{
+    height: 63%;
+    top: 0;
+  }
+  .model_inner .titleSwiper{padding: 1rem 0;}
+  .model_inner .titleSwiper .swiper-wrapper .swiper-slide{
+    font-size: var(--h5);
+    line-height: 163%; /* 26.08px */
+    letter-spacing: 0.24px;
+    white-space: nowrap;
+  }
+
+  .model_inner .titleSwiper .swiper-wrapper .swiper-slide-active::before, 
+  .model_inner .titleSwiper .swiper-wrapper .swiper-slide-active::after {
+    width: 100%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper{margin: 70px auto;}
+  .model .car_swiper .swiper-container .swiper-wrapper .swiper-slide img{
+    width: 100%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .circle{
+    position: absolute;
+    z-index: 10;
+    animation: var(--a);
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_circle{
+    bottom: 3%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_circle > img{
+    width: 10vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_front{
+    left: 13.3%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_end{
+    right: 14.3%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle > img{
+    width: 8.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle{
+    bottom: 9%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_front{
+    left: 16.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_end{
+    right: 18%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle > img{
+    width: 10.5vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle{
+    bottom: 6%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_front{
+    left: 12.7%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_end{
+    right: 15.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle > img{
+    width: 8.7vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle{
+    bottom: 12%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_front{
+    left: 14.4%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_end{
+    right: 19%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_circle > img{
+    width: 9.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_circle{
+    bottom: 11%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_front{
+    left: 13.7%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_end{
+    right: 16.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle > img{
+    width: 9vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle{
+    bottom: 9%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_front{
+    left: 12.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_end{
+    right: 16%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle > img{
+    width: 10.2vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle{
+    bottom: 7%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_front{
+    left: 14.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_end{
+    right: 14%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle > img{
+    width: 8.7vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle{
+    bottom: 8%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_front{
+    left: 16.4%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_end{
+    right: 16.8%;
+  }
+
+  .model .more_btn{
+    padding: 1rem;
+    margin: auto auto 0;
+    border: 1px solid white;
+    border-radius: 5px;
+    /* position: relative; */
+    transition: 0.7s;
+    width: 210px;
+    height: 50px;
+  }
+  .model .more_btn span{
+    font-size: var(--h5);
+    font-weight: 400;
+  }
+
+  .model .more_btn span a{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .model .more_btn span a .model_btn_arrow{
+    transform: scale(0.75);
+  }
+  .model .more_btn span::before{
+    content: '';
+    position: absolute;
+    /* left: -398%; */
+    top: -400%;
+    z-index: -1;
+    background-color: white;
+    display: block;
+    /* width: 450%;
+    height: 450%; */
+    transform: rotate(315deg);
+    transition: 0.5s;
+  }
+  .model .more_btn:hover span::before{    left: -122%;}
+  .model .more_btn.click::before{left: -122%;}
+  .model .more_btn.click span a .model_btn_arrow{
+    background-image: url(../img/model/rightarrowBlack.png);
+  }
+  .model .more_btn.click span a{color: black;}
+}
+@media (max-width: 590px) {
+  .model .bgSwiper{
+    height: 60%;
+    top: 0;
+  }
+}
+@media (max-width: 520px) {
+  .model .bgSwiper{
+    height: 57%;
+    max-height: 490px;
+    top: 0;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper .swiper-slide img{
+    width: 140%;
+    transform: scale(1.8);
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_circle{
+    bottom: -18%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_circle > img{
+    width: 6.1vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_front{
+    left: -33.7%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_end{
+    right: -30.7%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle > img{
+    width: 5.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle{
+    bottom: -10%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_front{
+    left: -27.7%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_end{
+    right: -24.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle > img{
+    width: 6.2vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle{
+    bottom: -11%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_front{
+    left: -35.4%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_end{
+    right: -28%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle > img{
+    width: 5.5vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle{
+    bottom: -6%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_front{
+    left: -32%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_end{
+    right: -21.2%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_circle > img{
+    width: 6.1vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_circle{
+    bottom: -6%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_front{
+    left: -33.9%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_end{
+    right: -26.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle > img{
+    width: 5.5vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle{
+    bottom: -9%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_front{
+    left: -37%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_end{
+    right: -28%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle > img{
+    width: 6.2vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle{
+    bottom: -11%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_front{
+    left: -31%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_end{
+    right: -31.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle > img{
+    width: 5.2vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle{
+    bottom: -11%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_front{
+    left: -27%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_end{
+    right: -26%;
+  }
+}
+@media (max-width: 460px) {
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle > img{
+    width: 5vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle{
+    bottom: -10%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_front{
+    left: -26.7%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_end{
+    right: -23.5%;
+  }
+
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle > img{
+    width: 5.3vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_circle > img{
+    width: 5.7vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_front{
+    left: -32.9%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_end{
+    right: -27%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle > img{
+    width: 5.2vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle > img{
+    width: 6vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle > img{
+    width: 5vw;
+  }
+}
+@media (max-width: 420px) {
+  .model .bgSwiper{max-height: 470px;}
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_circle{
+    bottom: -18%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_circle > img{
+    width: 5.2vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_front{
+    left: -32.7%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tou_end{
+    right: -30.7%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle > img{
+    width: 4.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle{
+    bottom: -9%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_front{
+    left: -27%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_end{
+    right: -22.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle > img{
+    width: 5.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle{
+    bottom: -10.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_front{
+    left: -34.4%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_end{
+    right: -28%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle > img{
+    width: 4.7vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle{
+    bottom: -6%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_front{
+    left: -32%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_end{
+    right: -20.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_circle > img{
+    width: 5.1vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_circle{
+    bottom: -6%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_front{
+    left: -33.9%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tia_end{
+    right: -26.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle > img{
+    width: 4.8vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle{
+    bottom: -9%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_front{
+    left: -37%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_end{
+    right: -28%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle > img{
+    width: 5.2vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle{
+    bottom: -11%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_front{
+    left: -29%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_end{
+    right: -31.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle > img{
+    width: 4.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle{
+    bottom: -12%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_front{
+    left: -26%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_end{
+    right: -26%;
+  }
+}
+
+@media (max-width: 390px) {
+  .model .bgSwiper{
+    max-height: 450px;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_circle > img{
+    width: 4.2vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_front{
+    left: -26%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .gti_end{
+    right: -23.5%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .id4_circle > img{
+    width: 5.3vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_circle > img{
+    width: 4.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_front{
+    left: -33%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .jet_end{
+    right: -21%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .art_circle > img{
+    width: 4.4vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_circle > img{
+    width: 5.1vw;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .tig_front{
+    left: -31%;
+  }
+  .model .car_swiper .swiper-container .swiper-wrapper > .swiper-slide > .golf_circle > img{
+    width: 4.2vw;
+  }
+}

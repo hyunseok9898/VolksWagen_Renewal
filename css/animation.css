@@ -1,0 +1,89 @@
+.headline .heading,
+.howToUse .heading h2,
+.orderOfUse li:nth-child(3) .iconWrap::before,
+.chargingMethod .heading h2,
+.cmContentsWrap li .imgWrap{
+  opacity: 0;
+}
+.headline .heading,
+.cmContentsWrap li:nth-child(1) .imgWrap,
+.cmContentsWrap li:nth-child(3) .imgWrap{
+  transform: translateX(-2rem);
+}
+.cmContentsWrap li:nth-child(2) .imgWrap{
+  transform: translateX(2rem);
+}
+.howToUse .heading h2,
+.chargingMethod .heading h2{
+  transform: translateY(var(--h3));
+}
+.headline .heading{
+  animation: slideL2R 0.5s forwards 0.3s;
+}
+.howToUse .heading h2{
+  animation: slideUp 1s forwards 1s;
+}
+.chargingMethod .heading.animation h2{
+  animation: slideUp 1s forwards;
+}
+.cmContentsWrap li:nth-child(1).animation .imgWrap{
+  animation: slideL2R 1s forwards 0.3s;
+}
+.cmContentsWrap li:nth-child(2).animation .imgWrap,
+.cmContentsWrap li:nth-child(3).animation .imgWrap{
+  animation: slideL2R 1s forwards;
+}
+
+
+@keyframes slideL2R {
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideUp {
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.orderOfUse li:nth-child(3) .iconWrap::before{
+  transform: rotateY(0) scale(0.8);
+  animation: charging 3s infinite;
+}
+.orderOfUse li:nth-child(2).animation .iconWrap::before{
+  animation: touch 1s forwards 0.8s;
+}
+
+
+@keyframes charging {
+  50%{
+    opacity: 1;
+    transform: rotateY(360deg) scale(1);
+  }
+}
+@keyframes touch {
+  20%{
+    top: 65px;
+  }
+  40%{
+    opacity: 1;
+  }
+  80%{
+    top: 55px;
+    transform: scale(1);
+  }
+  90%{
+    top: 60px;
+    left: 75px;
+    transform: scale(0.9);
+  }
+  100%{
+    opacity: 1;
+    top: 60px;
+    left: 75px;
+    transform: scale(1);
+  }
+}

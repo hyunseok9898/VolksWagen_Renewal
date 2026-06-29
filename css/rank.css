@@ -1,0 +1,316 @@
+/* common */
+@font-face {
+	font-family: 'vw-head-bold'; /* 폰트 이름 */
+	src: url('../font/vw-head-bold.otf') format('opentype'); /* 폰트 파일 경로 */
+	/* 다른 형식에 대해서도 추가적인 선언 가능 */
+	font-family: 'vw-head'; /* 폰트 이름 */
+	src: url('../font/vw-head.otf') format('opentype'); /* 폰트 파일 경로 */
+}
+
+/* rank */
+.rank{
+	padding: 160px 0;
+	overflow-x: hidden;
+}
+.rank_inner{
+	width: 1500px;
+	margin: auto;
+}
+.rank_inner .rank_text .rank_textDown{
+	display: flex;
+	justify-content: space-between;
+}
+.rank_inner .rank_text .rank_textDown button{
+	background-color: transparent;
+	cursor: pointer;
+	font-size: var(--h5);
+}
+.rank_inner .rank_text .rank_textDown button i{color: white;}
+.rank_inner .rank_wrap{
+	height: 440px;
+	display: grid;
+	grid-template-columns: 60% 40%;
+	margin-top: 75px;
+	position: relative;
+}
+.rank_inner .rank_wrap .rank_bigCar{
+	position: relative;
+}
+.rank_inner .rank_wrap .rank_bigCar .bigCar_textBox {
+	display: flex;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 1;
+	transition: transform 0.3s ease, opacity 0.3s ease; 
+	/* transform 속성도 추가 */
+	/* animation: slideFromBottom 0.3s ease forwards;  */
+	/* 애니메이션 적용 */
+	animation: var(--b);
+}
+/* 애니메이션 */
+@keyframes slideFromBottom {
+	from {
+	  transform: translateY(20%);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateY(0%);
+	  opacity: 1;
+	}
+}
+.rank_inner .rank_wrap .rank_bigCar .bigCar_textBox .rank_ranking{
+	margin-right: 1rem;
+}
+.rank_inner .rank_wrap .rank_bigCar .bigCar_textBox .rank_info .rank_title,
+.rank_inner .rank_wrap .rank_bigCar .bigCar_textBox .rank_info .rank_color{
+	font-family: 'vw-head', 'Pretendard', sans-serif;
+}
+.rank_inner .rank_wrap .rank_bigCar .bigCar_textBox .rank_info .rank_color{
+	margin: 10px 0;
+}
+.rank_inner .rank_wrap .rank_bigCar .bigCar_img{
+  width: 700px;
+  height: 100%;
+  position: absolute;
+  right: 4%;
+  bottom: -11%;
+	background-image: url(../img/rank/rank1.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	opacity: 1;
+	transition: opacity 0.4s ease; /* 추가: 투명도 전환 효과 */
+}
+/* 추가 */
+
+.rank_tab{
+	position: relative;
+	height: 440px;
+}
+.rank-swiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.rank-swiper .swiper-slide {
+	background-color: rgba(255, 255, 255, 0.1);
+	height: 137px !important;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.rank-swiper .rank_item{
+	display: flex;
+	justify-content: flex-start;
+	padding: 0 20px;
+	align-items: center;
+}
+.rank-swiper .rank_item .item_textBox .item_color{
+	display: none;
+}
+.rank-swiper .rank_item .item_textBox .item_title{
+	font-family: 'vw-head', 'Pretendard', sans-serif;
+	margin-bottom: 1rem;
+}
+
+.rank-swiper .rank_item .item_imgBox{
+	width: 150px;
+	height: 110px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 0 30px;
+	transform: translateY(19%);
+}
+.rank-swiper .rank_item .item01{background-image: url(../img/rank/rank1.png);}
+.rank-swiper .rank_item .item02{background-image: url(../img/rank/rank2.png);}
+.rank-swiper .rank_item .item03{background-image: url(../img/rank/rank3.png);}
+.rank-swiper .rank_item .item04{background-image: url(../img/rank/rank4.png);}
+.rank-swiper .rank_item .item05{background-image: url(../img/rank/rank5.png);}
+.rank-swiper .rank_item .item06{background-image: url(../img/rank/rank6.png);}
+.rank_inner .rank_swiper_button{
+    position: absolute;
+    bottom: -13px;
+    right: -4%;
+    width: 50px;
+    height: 100px;
+}
+.rank_inner .rank_swiper_button .swiper-button-next,
+.rank_inner .rank_swiper_button .swiper-button-prev{
+	transform: rotate(90deg);
+	width: 28px;
+	height: 28px;
+	color: white;
+	border-radius: 100%;
+	border: 1px solid white;
+	margin-top: 0;
+}
+.rank_inner .rank_swiper_button .swiper-button-next{
+	left: 0;
+    bottom: 0;
+}
+.rank_inner .rank_swiper_button .swiper-button-next::after,
+.rank_inner .rank_swiper_button .swiper-button-prev::after{font-size: 16px;}
+.rank_inner .rank_swiper_button .swiper-button-next::after{
+	position: relative;
+	top: 0px;
+	left: 5%;
+}
+.rank_inner .rank_swiper_button .swiper-button-prev::after{
+	position: relative;
+	top: 0;
+	left: -5%;
+}
+.rank_inner .rank_swiper_button .swiper-button-prev{    
+	top: 10px;
+    left: 0;
+}
+.rank_inner .rank_wrap .rank_day{
+	position: absolute;
+	left: 60%;
+	bottom: -8%;
+}
+/***** 반응형 *****/
+/***** 반응형 *****/
+@media (max-width: 1500px) {
+  .rank_inner .rank_wrap .rank_bigCar .bigCar_textBox .rank_ranking{
+		margin-right: 0;
+		padding: 0 1rem;
+	}
+	.rank_inner .rank_text h2{padding: 0 1rem;}
+	.rank_inner .rank_text .rank_textDown p{padding: 0 1rem;}
+}
+@media (max-width: 768px) {
+  /* common */
+  :root{
+    /* size */
+    font-size: 14px; /* 기본 사이즈*/
+    --h1: 2.286rem; /* 32px */
+    --h2: 1.929rem; /* 27px */
+    --h3: 1.714rem; /* 24px */
+    --h4: 1.286rem; /* 18px */
+    --h5: 1.143rem; /* 16px */
+  }
+
+	/* rank */
+	.rank{padding: 100px 0;}
+	.rank_inner{width: 90%;}
+	.rank_inner .rank_text h2{
+		text-align: center;
+		padding: 0;
+	}
+	.rank_inner .rank_text .rank_textDown{
+		flex-direction: column;
+		text-align: center;
+		padding: 0;
+	}
+	.rank_inner .rank_text .rank_textDown button{
+		text-align: right;
+		margin-top: 1rem;
+	}
+	.rank_inner .rank_wrap{
+		display: flex;
+		flex-direction: column;
+		margin-top: 1rem;
+		position: relative;
+		height: 100%;
+	}
+	.rank_inner .rank_wrap .rank_bigCar{
+		position: static;
+		display: flex;
+		flex-direction: column;
+	}
+	.rank_inner .rank_wrap .rank_bigCar .bigCar_textBox{
+		display: flex;
+		position: static;
+		order: 2;
+		margin-top: 2rem;
+	}
+	.rank_inner .rank_wrap .rank_bigCar .bigCar_textBox .rank_ranking{
+		margin-right: 0;
+		padding: 0;
+	}
+	.rank_inner .rank_wrap .rank_bigCar .bigCar_textBox .rank_info{
+		position: relative;
+		margin-left: 36px;
+	}
+	.rank_inner .rank_wrap .rank_bigCar .bigCar_textBox .rank_info .rank_title,
+	.rank_inner .rank_wrap .rank_bigCar .bigCar_textBox .rank_info .rank_color{
+		font-family: 'vw-head-bold';
+	}
+	.rank_inner .rank_wrap .rank_bigCar .bigCar_textBox .rank_info .rank_color{
+		margin: 0;
+	}
+	.rank_inner .rank_wrap .rank_bigCar .bigCar_textBox .rank_info::before{
+		content: '';
+		position: absolute;
+		width: 1px;
+		height: 90%;
+		background-color: white;
+		left: -1rem;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.rank_inner .rank_wrap .rank_bigCar .bigCar_img{
+		width: 100%;
+		height: 230px;
+		position: static;
+		order: 1;
+		margin: auto;
+		background-position: center;
+	}
+	.rank_tab{
+		position: static;
+		height: 300px;
+		margin-top: 2rem;
+	}
+	.rank-swiper {
+		width: 100%;
+		height: 100%;
+		margin: 5px auto;
+		overflow: hidden;
+	}
+	.rank-swiper .swiper-slide {
+		background-color: rgba(255, 255, 255, 0.1);
+		height: 85px !important;
+		display: flex;
+		align-items: center;
+		margin-bottom: 0;
+		margin-top: 10px;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	.rank-swiper .rank_item{
+		display: flex;
+		justify-content: flex-start;
+		padding: 0 18px;
+		align-items: center;
+		gap: 30px;
+	}
+	.rank-swiper .rank_item .item_ranking{
+		font-size: var(--h1);
+	}
+	.rank-swiper .rank_item .item_textBox .item_title{
+		font-size: 20px;
+		font-weight: 700;
+		margin-bottom: 0;
+	}
+	.rank-swiper .rank_item .item_textBox .item_price{
+		font-size: 1rem;
+		font-weight: 500;
+	}
+	.rank-swiper .rank_item .item_imgBox{
+		display: none;
+	}
+	.rank_inner .rank_swiper_button .swiper-button-next,
+	.rank_inner .rank_swiper_button .swiper-button-prev{
+		display: none;
+	}
+	.rank_inner .rank_swiper_button .swiper-button-next::after,
+	.rank_inner .rank_swiper_button .swiper-button-prev::after{
+		opacity: 0;
+		visibility: hidden;
+	}
+	.rank_inner .rank_wrap .rank_day{left: 1%;}
+}

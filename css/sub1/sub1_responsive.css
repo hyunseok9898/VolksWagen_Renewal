@@ -1,0 +1,80 @@
+@media (max-width: 768px){
+  /* 중복 */
+  .headline{
+    padding: 0 var(--h5);
+  }
+  .howToUse{
+    padding: 100px var(--h5);
+  }
+
+  /***** 메인 헤드라인 시작 *****/
+  section.headline{
+    height: 500px;
+  }
+  .headline .heading{
+    bottom: var(--h1);
+  }
+  /***** 메인 헤드라인 끝 *****/
+
+  /***** 섹션1_전기차 충전 사용 시작 *****/
+  .howToUse{}
+  .howToUse .heading{
+    margin-bottom: 45px;
+  }
+
+  .howToUse ul.orderOfUse{
+    flex-direction: column;
+    gap: var(--h1);
+  }
+  .orderOfUse li{
+    width: 100%;
+    height: 350px;
+    padding: var(--h1);
+  }
+  .orderOfUse li.animation::before{
+    left: calc(100% - 100px - 5.5rem);
+  }
+  .orderOfUse li .textWrap .num{
+    font-size: var(--h5);
+  }
+  .orderOfUse li:nth-child(2).animation .iconWrap::before{
+    animation: touch 1s forwards;
+  }
+  .orderOfUse li:nth-child(2).animation .iconWrap::after{
+    opacity: 1;
+    transition-delay: 0.9s;
+  }
+  /***** 섹션1_전기차 충전 사용 끝 *****/
+
+  /***** 섹션2_전기차 충전 방식 시작 *****/
+  .chargingMethod{
+    padding: 100px 0;  
+  }
+  .chargingMethod .heading{
+    margin-bottom: 2rem;
+  }
+  .cmContentsWrap{
+    gap: 60px;
+  }
+  .cmContentsWrap li,
+  .cmContentsWrap li:nth-child(even),
+  .cmContentsWrap li .desc{
+    flex-direction: column;
+  }
+  .cmContentsWrap li{
+    height: fit-content;
+    gap: var(--h1);
+  }
+  .cmContentsWrap li .imgWrap,
+  .cmContentsWrap li .desc,
+  .cmContentsWrap li .desc .moreViewBtn{
+    width: 100%;
+  }
+  .cmContentsWrap li .desc{
+    padding: 0 var(--h5) var(--h1);
+  }
+  .cmContentsWrap li .desc p{
+    margin: 1rem 0 45px;
+  }
+  /***** 섹션2_전기차 충전 방식 끝 *****/
+}

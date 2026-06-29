@@ -1,0 +1,11 @@
+body{background-color: #ddd;}
+.box{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  
+}
+.box1{background-color: orange;
+top: 30%;
+left: 50%;
+transform: translate(-50%, -50%);}
